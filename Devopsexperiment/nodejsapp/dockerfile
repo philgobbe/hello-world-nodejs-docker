@@ -1,0 +1,8 @@
+
+FROM nodejs
+WORKDIR /app/
+COPY package.json /app
+RUN npm config set strict-ssl false 
+RUN npm install -express
+COPY . /app
+CMD ["npm","start"]

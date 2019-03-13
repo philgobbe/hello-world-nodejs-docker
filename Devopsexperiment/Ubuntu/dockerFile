@@ -1,0 +1,15 @@
+#This is a sample image is a comment. Comments can be added to the file using # command.
+FROM ubuntu 
+
+MAINTAINER  PG <philip.gobbe@yvw.com.au>
+
+
+# Using Ubuntu
+
+
+RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list 
+RUN   apt-get update
+
+
+CMD ["test","myubuntu"]
+ 

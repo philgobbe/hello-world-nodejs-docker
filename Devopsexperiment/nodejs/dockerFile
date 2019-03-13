@@ -1,0 +1,12 @@
+#This is a sample image is a comment. Comments can be added to the file using # command.
+
+FROM meanubuntu 
+
+MAINTAINER  PG <philip.gobbe@yvw.com.au>
+
+# Run as root on RHEL, CentOS, CloudLinux or Fedora:
+#RUN curl -sL --insecure https://deb.nodesource.com/setup_11.x
+# Install as Root
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+CMD ["node", "-v"] 
